@@ -1,0 +1,11 @@
+.card {
+  width: 100px;
+  height: 145px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}

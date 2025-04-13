@@ -1,0 +1,13 @@
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 12px 0;
+  font-size: 18px;
+}

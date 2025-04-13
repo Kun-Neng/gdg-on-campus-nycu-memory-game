@@ -1,0 +1,9 @@
+<div class="card" (click)="flipCard()">
+  <ng-container *ngIf="card().isMatched || card().isFlipped; else notFlipped">
+    <img [src]="card().image" class="card-image" />
+  </ng-container>
+
+  <ng-template #notFlipped>
+    <img [src]="card().back" class="card-image" alt="Card Back" />
+  </ng-template>
+</div>
