@@ -1,0 +1,12 @@
+<div class="game-container">
+  <ng-container *ngFor="let card of cards">
+    <app-card [card]="card" (cardFlipped)="flipCard($event)"></app-card>
+  </ng-container>
+</div>
+
+<div class="game-info">
+  <div>Moves: {{ moves }}</div>
+  <div *ngIf="isWin">You Win!</div>
+</div>
+
+<button type="button" (click)="startGame()">Restart Game</button>

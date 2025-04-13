@@ -1,13 +1,21 @@
-.game-container {
-  display: grid;
-  grid-template-columns: repeat(4, 100px);
-  gap: 10px;
-}
-
-.game-info {
+:host {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  margin: 12px 0;
-  font-size: 18px;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  /* padding: 16px; */
+}
+
+.title {
+  padding: 4px;
+  background-color: #cfdfc2;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
 }

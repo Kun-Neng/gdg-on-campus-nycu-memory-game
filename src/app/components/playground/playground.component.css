@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: 100%;
+  padding: 12px;
+  background-color: #c7d5dc;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(20px, 100px));
+  gap: 12px;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 12px 0;
+  font-size: 18px;
+}
