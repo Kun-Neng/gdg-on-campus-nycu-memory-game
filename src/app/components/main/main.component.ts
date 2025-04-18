@@ -11,6 +11,6 @@ export class MainComponent {
   constructor(private router: Router) { }
 
   startGame() {
-    this.router.navigate(['/playground']);
+    this.router.navigate(['/login']);
   }
 }

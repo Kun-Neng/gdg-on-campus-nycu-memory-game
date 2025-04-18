@@ -1,0 +1,47 @@
+<form [formGroup]="loginForm" (ngSubmit)="logIn()">
+  <div class="container">
+    <fieldset>
+      <legend>User Information</legend>
+
+      <label for="account">Account</label>
+      <input id="account" type="email" placeholder="Email" autocomplete="username" formControlName="account" />
+
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Password" autocomplete="current-password" formControlName="password" />
+    </fieldset>
+
+    <div class="button-group">
+      <button type="submit">Log in</button>
+      <!-- <button type="submit" [disabled]="loginForm.invalid">Log in</button> -->
+      <!-- <button type="button" (click)="signUp()">Sign up</button> -->
+    </div>
+
+    <div class="error-message">
+      <div>
+        <ng-container *ngIf="isSubmitted && account.errors">
+          <ng-container *ngIf="account.errors['required']; else invalidEmail">
+            Account is required
+          </ng-container>
+          <ng-template #invalidEmail>
+            <ng-container *ngIf="account.invalid">
+              Invalid email address
+            </ng-container>
+          </ng-template>
+        </ng-container>
+      </div>
+
+      <div>
+        <ng-container *ngIf="isSubmitted && password.errors">
+          <ng-container *ngIf="password.errors['required']; else invalidPassword">
+            Password is required
+          </ng-container>
+          <ng-template #invalidPassword>
+            <ng-container *ngIf="password.invalid">
+              Invalid password length (at least {{ password.errors['minlength']?.requiredLength }} characters)
+            </ng-container>
+          </ng-template>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</form>
